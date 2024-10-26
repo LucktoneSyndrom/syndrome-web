@@ -1,0 +1,48 @@
+/* src/app/messages/MessagesPage.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.tabMenu {
+    display: flex;
+    margin-top: 20px;
+}
+
+.tabMenu button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 16px;
+    background-color: #bdc3c7;
+    border: none;
+    color: #2c3e50;
+}
+
+.tabMenu button.active {
+    background-color: #ffffff;
+    border-bottom: 2px solid #3498db;
+}
+
+.messageList {
+    margin-top: 20px;
+}
+
+.messageItem {
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.messageItem h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.messageItem p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 8px;
+}

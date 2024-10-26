@@ -27,10 +27,14 @@ const mockTeamCardData: TeamCardInfo[] = [
     // 추가 팀 카드 데이터
 ];
 
-const GatherPage = () => {
-    const [tab, setTab] = useState<'team' | 'member'>('team');
+const mockAppliedTeamsData: TeamCardInfo[] = [
+    // 내가 지원한 팀 데이터
+];
 
-    const handleTabClick = (selectedTab: 'team' | 'member') => {
+const GatherPage = () => {
+    const [tab, setTab] = useState<'team' | 'applied'>('team');
+
+    const handleTabClick = (selectedTab: 'team' | 'applied') => {
         setTab(selectedTab);
     };
 
@@ -45,10 +49,10 @@ const GatherPage = () => {
                     팀 찾기
                 </button>
                 <button
-                    onClick={() => handleTabClick('member')}
-                    className={tab === 'member' ? styles.active : ''}
+                    onClick={() => handleTabClick('applied')}
+                    className={tab === 'applied' ? styles.active : ''}
                 >
-                    팀원 찾기
+                    내가 지원한 팀 보기
                 </button>
             </div>
 
@@ -68,8 +72,15 @@ const GatherPage = () => {
                     </>
                 ) : (
                     <>
-                        {/* 팀원 찾기 내용 */}
-                        <p className={styles.noData}>등록된 팀원 프로필이 없습니다.</p>
+                        {mockAppliedTeamsData.length > 0 ? (
+                            <div className={styles.teamCardList}>
+                                {mockAppliedTeamsData.map((team) => (
+                                    <TeamCard key={team.id} teamCardInfo={team} />
+                                ))}
+                            </div>
+                        ) : (
+                            <p className={styles.noData}>지원한 팀이 없습니다.</p>
+                        )}
                     </>
                 )}
             </section>
