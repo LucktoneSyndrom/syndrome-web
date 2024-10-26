@@ -1,0 +1,94 @@
+/* src/app/gather/team/[id]/TeamDetail.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.teamName {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.teamDescription {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 16px;
+}
+
+.projectDescription {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.deadline {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-bottom: 16px;
+}
+
+.recruitmentParts {
+    margin-bottom: 16px;
+}
+
+.recruitmentPart {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.techStacks {
+    margin-bottom: 16px;
+}
+
+.techStackItem {
+    display: inline-block;
+    background-color: #ecf0f1;
+    padding: 8px 12px;
+    border-radius: 16px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #2c3e50;
+}
+
+.currentMembers {
+    margin-bottom: 16px;
+}
+
+.memberItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.memberImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    margin-right: 12px;
+}
+
+.memberInfo {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.leaderInfo {
+    margin-bottom: 16px;
+}
+
+.joinButton {
+    padding: 12px 20px;
+    background-color: #2ecc71;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.joinButton:hover {
+    background-color: #27ae60;
+}

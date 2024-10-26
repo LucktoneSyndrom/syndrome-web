@@ -1,0 +1,54 @@
+/* src/app/HomePage.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.hero h1 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 8px;
+}
+
+.hero button {
+    margin-top: 16px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.features {
+    margin-top: 40px;
+}
+
+.featureCard {
+    background-color: #ecf0f1;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.featureCard h2 {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+.featureCard p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 8px;
+}
