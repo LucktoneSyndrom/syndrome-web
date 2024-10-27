@@ -1,6 +1,6 @@
 // src/components/TeamItem.tsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './TeamItem.module.css';
 import { useRouter } from 'next/navigation';
 import { TeamCardInfo } from '../types/TeamCardInfo';
@@ -11,19 +11,15 @@ interface TeamItemProps {
 
 const TeamItem: React.FC<TeamItemProps> = ({ teamInfo }) => {
     const router = useRouter();
+    const [isClosed, setIsClosed] = useState(false); // 마감 여부 상태
 
-    const handleCheckClosed = () => {
-        // 마감 여부 확인 로직
-        alert('마감 여부를 확인합니다.');
+    const handleToggleChange = () => {
+        setIsClosed(!isClosed);
+        // 마감 상태 변경 로직 처리 (예: API 호출)
     };
 
     const handleViewDetails = () => {
         router.push(`/find/my-team/${teamInfo.id}`);
-    };
-
-    const handleCloseRecruitment = () => {
-        // 모집 마감 로직
-        alert('모집을 마감합니다.');
     };
 
     const handleViewApplicants = () => {
@@ -37,21 +33,33 @@ const TeamItem: React.FC<TeamItemProps> = ({ teamInfo }) => {
     return (
         <div className={styles.teamItem}>
             <h3 className={styles.teamName}>{teamInfo.teamName}</h3>
+
+            <div className={styles.statusContainer}>
+                <span className={styles.statusLabel}>마감 여부:</span>
+                <span>{isClosed ? '마감됨' : '모집 중'}</span>
+            </div>
+
+            <div className={styles.statusContainer}>
+                <span className={styles.statusLabel}>마감시키기:</span>
+                <label className={styles.toggleSwitch}>
+                    <input
+                        type="checkbox"
+                        checked={isClosed}
+                        onChange={handleToggleChange}
+                    />
+                    <span className={styles.slider}></span>
+                </label>
+            </div>
+
             <div className={styles.buttonContainer}>
-                <button className={styles.button} onClick={handleCheckClosed}>
-                    마감 여부
-                </button>
-                <button className={styles.button} onClick={handleViewDetails}>
-                    자세히 보기
-                </button>
-                <button className={styles.button} onClick={handleCloseRecruitment}>
-                    마감시키기
-                </button>
                 <button className={styles.button} onClick={handleViewApplicants}>
                     지원자 보기
                 </button>
                 <button className={styles.button} onClick={handleTeamChat}>
                     팀 채팅
+                </button>
+                <button className={styles.button} onClick={handleViewDetails}>
+                    자세히 보기
                 </button>
             </div>
         </div>

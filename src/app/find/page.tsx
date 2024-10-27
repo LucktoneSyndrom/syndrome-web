@@ -1,4 +1,5 @@
-"use client";
+// src/app/find/page.tsx
+'use client';
 
 import React from 'react';
 import styles from './FindPage.module.css';
