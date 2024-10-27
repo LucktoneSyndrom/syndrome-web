@@ -1,45 +1,57 @@
 // src/app/gather/team/[id]/page.tsx
+'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './TeamDetail.module.css';
+import { useParams } from 'next/navigation';
 import { TeamDetailInfo } from '../../../../types/TeamDetailInfo';
 
 interface TeamDetailPageProps {
     params: { id: string };
 }
 
-const mockTeamDetailData: TeamDetailInfo = {
-    id: '1',
-    teamName: '프로젝트 A',
-    teamDescription: '멋진 프로젝트를 함께할 팀원들을 모집합니다.',
-    projectDescription: '이 프로젝트는 ...',
-    deadline: '2023-10-31',
-    recruitmentParts: [
-        { partName: '백엔드', numberNeeded: 2 },
-        { partName: '프론트엔드', numberNeeded: 1 },
-    ],
-    techStacks: ['React', 'Node.js', 'TypeScript'],
-    currentMembers: [
-        {
-            id: '1',
-            name: '홍길동',
-            partName: '팀장 / 백엔드',
-            profileImageUrl: '',
-        },
-        // 추가 멤버 정보
-    ],
-    leaderInfo: {
-        id: '1',
-        name: '홍길동',
-        profileImageUrl: '',
-        introduction: '팀장 소개 문구',
-    },
-};
+const TeamDetailPage: React.FC = () => {
+    const params = useParams();
+    const teamId = params.id as string;
 
-const TeamDetailPage: React.FC<TeamDetailPageProps> = ({ params }) => {
-    // 실제로는 params.id를 사용하여 서버에서 데이터를 가져옵니다.
-    const teamDetailInfo = mockTeamDetailData;
+    const [teamDetailInfo, setTeamDetailInfo] = useState<TeamDetailInfo | null>(null);
 
+    useEffect(() => {
+        // 더미 데이터 사용
+        const mockTeamDetailData: TeamDetailInfo = {
+            id: teamId,
+            teamName: '프로젝트 A',
+            teamDescription: '멋진 프로젝트를 함께할 팀원들을 모집합니다.',
+            projectDescription: '이 프로젝트는 ...',
+            deadline: '2023-12-31',
+            recruitmentParts: [
+                { partName: '백엔드', numberNeeded: 2 },
+                { partName: '프론트엔드', numberNeeded: 1 },
+            ],
+            techStacks: ['React', 'Node.js', 'TypeScript'],
+            currentMembers: [
+                {
+                    id: '1',
+                    name: '홍길동',
+                    partName: '팀장 / 백엔드',
+                    profileImageUrl: '',
+                },
+                // 추가 멤버 정보
+            ],
+            leaderInfo: {
+                id: '1',
+                name: '홍길동',
+                profileImageUrl: '',
+                introduction: '팀장 소개 문구',
+            },
+        };
+
+        setTeamDetailInfo(mockTeamDetailData);
+    }, [teamId]);
+
+    if (!teamDetailInfo) {
+        return <p>로딩 중...</p>;
+    }
     return (
         <div className={styles.container}>
             <h1 className={styles.teamName}>{teamDetailInfo.teamName}</h1>

@@ -1,14 +1,20 @@
-// src/app/find/page.tsx
-'use client';
+"use client";
 
 import React from 'react';
 import styles from './FindPage.module.css';
 import { useRouter } from 'next/navigation';
-import TeamCard from '../../components/TeamCard';
+import TeamItem from '../../components/TeamItem'; // 새로운 컴포넌트
 import { TeamCardInfo } from '../../types/TeamCardInfo';
 
 const mockMyTeamsData: TeamCardInfo[] = [
-    // 내가 만든 팀 데이터
+    {
+        id: '1',
+        teamName: '내가 만든 프로젝트 1',
+        shortDescription: '프로젝트 설명 1',
+        deadline: '2023-12-31',
+        recruitmentParts: [{ partName: '백엔드', numberNeeded: 1 }],
+    },
+    // 추가 데이터
 ];
 
 const FindPage = () => {
@@ -29,7 +35,7 @@ const FindPage = () => {
                 {mockMyTeamsData.length > 0 ? (
                     <div className={styles.teamCardList}>
                         {mockMyTeamsData.map((team) => (
-                            <TeamCard key={team.id} teamCardInfo={team} />
+                            <TeamItem key={team.id} teamInfo={team} />
                         ))}
                     </div>
                 ) : (

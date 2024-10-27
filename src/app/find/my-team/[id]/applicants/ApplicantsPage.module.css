@@ -1,0 +1,68 @@
+/* src/app/find/my-team/[id]/applicants/ApplicantsPage.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.applicantsList {
+    margin-top: 20px;
+}
+
+.applicantItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.applicantImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    margin-right: 12px;
+}
+
+.applicantInfo {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.viewResumeButton,
+.contactButton,
+.addToTeamButton {
+    margin-left: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.viewResumeButton {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.contactButton {
+    background-color: #e67e22;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+.addToTeamButton {
+    background-color: #2ecc71;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+.viewResumeButton:hover {
+    background-color: #2980b9;
+}
+
+.contactButton:hover {
+    background-color: #d35400;
+}
+
+.addToTeamButton:hover {
+    background-color: #27ae60;
+}

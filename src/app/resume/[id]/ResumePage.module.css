@@ -1,0 +1,26 @@
+/* src/app/resume/[id]/ResumePage.module.css */
+
+.container {
+    padding: 20px;
+}
+
+.resumeHeader {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.resumeSection {
+    margin-bottom: 16px;
+}
+
+.resumeSection h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.resumeSection p {
+    font-size: 16px;
+    color: #7f8c8d;
+}

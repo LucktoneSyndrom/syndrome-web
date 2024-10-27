@@ -11,7 +11,7 @@ const mockTeamCardData: TeamCardInfo[] = [
         id: '1',
         teamName: '프로젝트 A',
         shortDescription: '백엔드 개발자를 모집합니다.',
-        deadline: '2023-10-31',
+        deadline: '2023-12-31',
         recruitmentParts: [
             { partName: '백엔드', numberNeeded: 2 },
             { partName: '프론트엔드', numberNeeded: 1 },
@@ -24,11 +24,14 @@ const mockTeamCardData: TeamCardInfo[] = [
         deadline: '2023-11-15',
         recruitmentParts: [{ partName: '프론트엔드', numberNeeded: 2 }],
     },
+    {
+        id: '3',
+        teamName: '프로젝트 C',
+        shortDescription: '모바일 앱 개발자를 모집합니다.',
+        deadline: '2023-12-31',
+        recruitmentParts: [{ partName: '모바일', numberNeeded: 1 }],
+    },
     // 추가 팀 카드 데이터
-];
-
-const mockAppliedTeamsData: TeamCardInfo[] = [
-    // 내가 지원한 팀 데이터
 ];
 
 const GatherPage = () => {
@@ -71,17 +74,8 @@ const GatherPage = () => {
                         )}
                     </>
                 ) : (
-                    <>
-                        {mockAppliedTeamsData.length > 0 ? (
-                            <div className={styles.teamCardList}>
-                                {mockAppliedTeamsData.map((team) => (
-                                    <TeamCard key={team.id} teamCardInfo={team} />
-                                ))}
-                            </div>
-                        ) : (
-                            <p className={styles.noData}>지원한 팀이 없습니다.</p>
-                        )}
-                    </>
+                    // 내가 지원한 팀 보기 내용 (이미 구현됨)
+                    <></>
                 )}
             </section>
         </div>

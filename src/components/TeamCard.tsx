@@ -7,13 +7,18 @@ import { TeamCardInfo } from '../types/TeamCardInfo';
 
 interface TeamCardProps {
     teamCardInfo: TeamCardInfo;
+    isSelected?: boolean;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo }) => {
+const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
     const router = useRouter();
 
     const handleDetailsClick = () => {
         router.push(`/gather/team/${teamCardInfo.id}`);
+    };
+
+    const handleChatClick = () => {
+        router.push(`/chat/team/${teamCardInfo.id}`);
     };
 
     return (
@@ -28,9 +33,16 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo }) => {
                     </p>
                 ))}
             </div>
-            <button className={styles.detailsButton} onClick={handleDetailsClick}>
-                자세히 보기
-            </button>
+            <div className={styles.buttonContainer}>
+                <button className={styles.detailsButton} onClick={handleDetailsClick}>
+                    자세히 보기
+                </button>
+                {isSelected && (
+                    <button className={styles.chatButton} onClick={handleChatClick}>
+                        팀 채팅
+                    </button>
+                )}
+            </div>
         </div>
     );
 };

@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './BottomTabNav.module.css';
-import { FaHome, FaSearch, FaPlusCircle, FaEnvelope, FaUser } from 'react-icons/fa';
+import {FaHome, FaSearch, FaPlusCircle, FaEnvelope, FaUser, FaComments} from 'react-icons/fa';
 
 const BottomTabNav = () => {
     const pathname = usePathname();
@@ -14,7 +14,7 @@ const BottomTabNav = () => {
         { name: '홈', href: '/', icon: <FaHome /> },
         { name: '모아요', href: '/gather', icon: <FaSearch /> },
         { name: '찾아요', href: '/find', icon: <FaPlusCircle /> },
-        { name: '쪽지', href: '/messages', icon: <FaEnvelope /> },
+        { name: '채팅', href: '/chat', icon: <FaComments /> }, // 아이콘도 변경 가능
         { name: '마이페이지', href: '/mypage', icon: <FaUser /> },
     ];
 
