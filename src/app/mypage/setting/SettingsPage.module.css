@@ -1,0 +1,53 @@
+/* src/app/mypage/settings/SettingsPage.module.css */
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.settingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    cursor: pointer; /* 클릭 가능 표시 */
+    transition: background-color 0.3s;
+    min-height: 60px; /* 최소 높이 설정 */
+}
+
+.settingBox:hover {
+    background-color: #f7f7f7; /* 호버 시 배경 색상 변경 */
+}
+
+.settingLabel {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.toggleInput {
+    margin-left: 10px;
+}
+
+.dark {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.dark .settingBox {
+    background-color: #34495e;
+    border-color: #7f8c8d;
+}
+
+.dark .settingLabel {
+    color: white;
+}
