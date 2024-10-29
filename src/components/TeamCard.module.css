@@ -1,84 +1,110 @@
 /* src/components/TeamCard.module.css */
 
 .teamCard {
-    background-color: #ffffff;
-    border: 1px solid #bdc3c7;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
+  background-color: #ffffff;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
 }
 
 .teamName {
-    font-size: 18px;
-    color: #2c3e50;
-    margin: 0;
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .shortDescription {
-    font-size: 14px;
-    color: #7f8c8d;
-    margin-top: 8px;
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .deadline {
-    font-size: 12px;
-    color: #e74c3c;
-    margin-top: 8px;
+  font-size: 12px;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+.deadlineDay {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.person {
+  font-size: 12px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.tag {
+  font-size: 12px;
+  color: #3498db;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .recruitmentParts {
-    margin-top: 8px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 .recruitmentPart {
-    font-size: 12px;
-    color: #2c3e50;
+  font-size: 12px;
+  color: #2c3e50;
+  margin-right: 5px;
 }
 
 .detailsButton {
-    margin-top: 12px;
-    padding: 8px 16px;
-    background-color: #3498db;
-    border: none;
-    border-radius: 4px;
-    color: #ffffff;
-    cursor: pointer;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .detailsButton:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .buttonContainer {
-    display: flex;
-    margin-top: 12px;
+  display: flex;
+  margin-top: 12px;
 }
 
 .detailsButton {
-    flex: 1;
-    padding: 8px 16px;
-    background-color: #3498db;
-    border: none;
-    border-radius: 4px;
-    color: #ffffff;
-    cursor: pointer;
-    margin-right: 8px;
+  flex: 1;
+  padding: 8px 16px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 8px;
 }
 
 .chatButton {
-    flex: 1;
-    padding: 8px 16px;
-    background-color: #2ecc71;
-    border: none;
-    border-radius: 4px;
-    color: #ffffff;
-    cursor: pointer;
+  flex: 1;
+  padding: 8px 16px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .detailsButton:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .chatButton:hover {
-    background-color: #27ae60;
+  background-color: #27ae60;
 }
