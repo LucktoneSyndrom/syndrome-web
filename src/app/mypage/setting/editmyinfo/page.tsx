@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from './SettingsPage.module.css';
+import styles from './EditMyInfoPage.module.css';
 
 const SettingsPage = () => {
     const router = useRouter();
@@ -19,42 +19,38 @@ const SettingsPage = () => {
     };
 
     const handleEditInfo = () => {
-        router.push('/mypage/setting/editmyinfo');
+        router.push('/mypage/profile');
     };
 
     return (
         <div className={`${styles.container} ${darkMode ? styles.dark : ''}`}>
-            <h1 className={styles.header}>설정</h1>
-
-            {/* 내 정보 수정 박스 */}
-            <div className={styles.settingBox} onClick={handleEditInfo}>
-                <span className={styles.settingLabel}>내 정보 수정</span>
-            </div>
-
-            {/* 알림 설정 박스 */}
+            <h1 className={styles.header}>내 정보 수정</h1>
             <div className={styles.settingBox}>
-                <span className={styles.settingLabel}>알림:</span>
+                <span className={styles.settingLabel}>아이디</span>
                 <label className={styles.toggleLabel}>
                     <input
-                        type="checkbox"
+                        type="textbox"
                         checked={notificationsEnabled}
                         onChange={handleToggleNotifications}
-                        className={styles.toggleInput}
+                        className={styles.infoInput}
                     />
                 </label>
             </div>
 
-            {/* 다크 모드 설정 박스 */}
             <div className={styles.settingBox}>
-                <span className={styles.settingLabel}>다크 모드:</span>
+                <span className={styles.settingLabel}>비밀번호</span>
                 <label className={styles.toggleLabel}>
                     <input
-                        type="checkbox"
+                        type="textbox"
                         checked={darkMode}
                         onChange={handleToggleDarkMode}
-                        className={styles.toggleInput}
+                        className={styles.infoInput}
                     />
                 </label>
+            </div>
+
+            <div className={styles.settingBox} onClick={handleEditInfo}>
+                <span style={{color:'red', fontWeight: 'bold'}}>회원탈퇴</span>
             </div>
         </div>
     );

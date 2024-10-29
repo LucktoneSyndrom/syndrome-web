@@ -41,6 +41,12 @@ const TeamChatPage = ({ params }: { params: { id: string } }) => {
         setNewMessage('');
     };
 
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            handleSendMessage();
+        }
+    };
+
     return (
         <div className={styles.container}>
             <h1 className={styles.chatHeader}>팀 채팅방</h1>
@@ -58,6 +64,7 @@ const TeamChatPage = ({ params }: { params: { id: string } }) => {
                     type="text"
                     value={newMessage}
                     onChange={(e) => setNewMessage(e.target.value)}
+                    onKeyDown={handleKeyDown} // 엔터 키 감지
                     placeholder="메시지 입력"
                 />
                 <button className={styles.sendButton} onClick={handleSendMessage}>
