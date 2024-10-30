@@ -1,0 +1,78 @@
+/* src/app/chat/team/TeamChatPage.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 60px); /* 바텀 탭 네비게이션 바 제외한 높이 */
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.chatMessages {
+    flex: 1;
+    overflow-y: auto; /* 스크롤 가능하게 */
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.messageItem {
+    margin-bottom: 10px;
+    display: block; /* 블록 요소로 변경 */
+    width: 100%; /* 전체 너비 사용 */
+}
+
+.myMessage {
+    text-align: right; /* 내 메시지의 경우 오른쪽 정렬 */
+}
+
+.otherMessage {
+    text-align: left; /* 상대방 메시지의 경우 왼쪽 정렬 */
+}
+
+.messageSender {
+    font-weight: bold;
+    color: #3498db; /* 발신자 이름 색상 */
+}
+
+.messageContent {
+    color: #2c3e50;
+}
+
+.chatInputContainer {
+    display: flex;
+}
+
+.chatInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sendButton:hover {
+    background-color: #2980b9;
+}

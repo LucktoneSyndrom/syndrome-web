@@ -6,12 +6,13 @@ import styles from './ProfilePage.module.css';
 
 const ProfilePage = () => {
     const [profile, setProfile] = useState({
-        name: '',
-        school: '',
-        major: '',
-        skills: '',
-        intro: '',
+        name: '홍길동',
+        school: '국립인천대학교',
+        major: '컴퓨터공학부',
+        skills: '프론트',
+        intro: '안녕하세요! 저는 국립인천대학교 컴퓨터공학부 학생으로, 프론트엔드 개발에 열정을 가지고 있습니다. 사용자 경험과 인터페이스에 대한 깊은 관심을 바탕으로, 효과적이고 직관적인 웹 애플리케이션 개발을 목표로 하고 있습니다.',
     });
+    
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setProfile({
