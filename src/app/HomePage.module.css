@@ -103,12 +103,6 @@
     background-color: #2980b9;
 }
 
-/* src/app/HomePage.module.css */
-
-.container {
-    padding: 20px;
-}
-
 .hero {
     text-align: center;
     margin-top: 40px;
@@ -157,3 +151,4 @@
     color: #7f8c8d;
     margin-top: 8px;
 }
+
