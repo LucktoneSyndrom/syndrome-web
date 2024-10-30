@@ -13,7 +13,8 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #bdc3c7;
+    background-image: url('./지범킴.png');
+    background-size: cover; /* 이미지 크기를 요소 크기에 맞춤 */
     margin-right: 16px;
 }
 
@@ -54,3 +55,69 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
 }
+
+
+
+
+
+.temperature-container {
+    background-color: #2e2e2e; /* 배경 색상 */
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    margin: 20px 0;
+  }
+  
+  .temperatureHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .first-temperature {
+    margin: 5px 0;
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .temperatureBarContainer {
+    background-color: #555;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .temperatureBar {
+    background-color: #ffa500;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  .current-temperature {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .temperature {
+    font-size: 18px;
+    color: #ffa500;
+  }
+  
+  .emoji {
+    font-size: 20px;
+  }
+  

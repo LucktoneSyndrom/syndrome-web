@@ -34,6 +34,11 @@
     color: #2c3e50;
 }
 
+.versionLabel {
+    font-weight: bold;
+    color: lightblue;
+}
+
 .toggleInput {
     margin-left: 10px;
 }
@@ -51,3 +56,5 @@
 .dark .settingLabel {
     color: white;
 }
+
+
