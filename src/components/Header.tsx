@@ -1,28 +1,33 @@
 // src/components/Header.tsx
+
 'use client';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './Header.module.css';
+import { FaArrowLeft } from 'react-icons/fa';
 
-const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+interface HeaderProps {
+    title: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ title }) => {
+    const router = useRouter();
+
+    const handleBackClick = () => {
+        if (typeof window !== 'undefined' && window.history.length > 1) {
+            router.back();
+        } else {
+            router.push('/');
+        }
+    };
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <Link href="/">Team Matching Platform</Link>
-            </div>
-            <nav>
-                <ul className={`${styles.navList} ${menuOpen ? styles.showMenu : ''}`}>
-                    <li><Link href="/gather">모아요</Link></li>
-                    <li><Link href="/mypage">마이페이지</Link></li>
-                    <li><Link href="/login">로그인</Link></li>
-                </ul>
-            </nav>
-            <div className={styles.menuIcon} onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
-            </div>
+            <button className={styles.backButton} onClick={handleBackClick}>
+                <FaArrowLeft />
+            </button>
+            <h1 className={styles.pageTitle}>{title}</h1>
         </header>
     );
 };

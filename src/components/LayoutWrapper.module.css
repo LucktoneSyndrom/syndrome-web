@@ -1,0 +1,5 @@
+/* src/components/LayoutWrapper.module.css */
+
+.containerWithHeader {
+    padding-top: 60px; /* 헤더 높이만큼 패딩 추가 */
+}
