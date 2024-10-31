@@ -13,6 +13,28 @@ const MyPage = () => {
     const [userStack, setUserStack] = useState("야리돌림 전문가");
     const [temperature, setTemperature] = useState(36.5); // 초기 온도
 
+    // 데이터 초기화 함수 추가
+    const resetTestData = async () => {
+        if (confirm('정말로 모든 데이터를 초기화하시겠습니까?')) {
+            try {
+                const response = await fetch('/api/admin/reset-data', {
+                    method: 'POST',
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('데이터가 초기화되었습니다.');
+                } else {
+                    alert('오류 발생: ' + result.message);
+                }
+            } catch (error) {
+                console.error('데이터 초기화 중 오류 발생:', error);
+                alert('데이터 초기화 중 오류 발생');
+            }
+        }
+    };
+
     const handleMenuItemClick = (menuId: string) => {
         if (menuId === 'profile') {
             router.push(`/mypage/profile`);
@@ -93,6 +115,10 @@ const MyPage = () => {
                 <div className={styles.menuItem} onClick={() => handleMenuItemClick('profile')}>내 이력서</div>
                 <div className={styles.menuItem} onClick={() => handleMenuItemClick('team')}>내 팀 정보</div>
                 <div className={styles.menuItem} onClick={() => handleMenuItemClick('setting')}>설정</div>
+                {/* 개발용 데이터 초기화 버튼 추가 */}
+                <div className={styles.menuItem} onClick={resetTestData} style={{ color: 'red' }}>
+                    개발용 데이터 초기화
+                </div>
             </div>
         </div>
     );
