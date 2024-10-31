@@ -1,7 +1,7 @@
 // src/app/api/user/profile/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { User } from '../../../../models/user';
+import { User } from '../../../models/user';
 
 /**
  * 사용자 프로필 조회 API

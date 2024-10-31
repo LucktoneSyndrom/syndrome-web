@@ -1,8 +1,8 @@
 // src/app/api/teams/[teamId]/applicants/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Application } from '../../../../../models/application';
-import { User } from '../../../../../models/user';
+import { Application } from '../../../../models/application';
+import { User } from '../../../../models/user';
 
 /**
  * 지원자 목록 조회 API

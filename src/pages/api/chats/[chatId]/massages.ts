@@ -1,7 +1,7 @@
 // src/app/api/chats/[chatId]/messages/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Message } from '../../../../../models/message';
+import { Message } from '../../../../models/message';
 
 /**
  * 채팅 메시지 조회 및 전송 API

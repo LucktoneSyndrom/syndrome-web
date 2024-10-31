@@ -1,7 +1,7 @@
 // src/app/api/resumes/[resumeId]/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Resume } from '../../../../models/resume';
+import { Resume } from '../../../models/resume';
 
 /**
  * 이력서 조회 API

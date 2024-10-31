@@ -1,8 +1,8 @@
 // src/app/api/user/applied-teams/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Application } from '../../../../models/application';
-import { Team } from '../../../../models/team';
+import { Application } from '../../../models/application';
+import { Team } from '../../../models/team';
 
 /**
  * 지원한 팀 목록 조회 API

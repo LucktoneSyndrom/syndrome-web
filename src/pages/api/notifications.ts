@@ -1,7 +1,7 @@
 // src/app/api/notifications/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Notification } from '../../../models/notification';
+import { Notification } from '../../models/notification';
 
 /**
  * 알림 목록 조회 API

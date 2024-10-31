@@ -1,7 +1,7 @@
 // src/app/api/teams/[teamId]/applicants-count/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Application } from '../../../../../models/application';
+import { Application } from '../../../../models/application';
 
 /**
  * 지원자 수 조회 API

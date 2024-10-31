@@ -1,7 +1,7 @@
 // src/app/api/teams/[teamId]/is-applied/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { Application } from '../../../../../models/application';
+import { Application } from '../../../../models/application';
 
 /**
  * 지원 여부 확인 API

@@ -1,8 +1,8 @@
 // src/app/api/user/my-teams/reset-data.ts
 
 import { NextResponse } from 'next/server';
-import { User } from '../../../../models/user';
-import { Team } from '../../../../models/team';
+import { User } from '../../../models/user';
+import { Team } from '../../../models/team';
 
 /**
  * 나의 팀 목록 조회 API
