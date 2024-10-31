@@ -39,16 +39,15 @@ const TeamItem: React.FC<TeamItemProps> = ({ teamInfo }) => {
                 <span>{isClosed ? '마감됨' : '모집 중'}</span>
             </div>
 
-            <div className={styles.statusContainer}>
-                <span className={styles.statusLabel}>마감시키기:</span>
-                <label className={styles.toggleSwitch}>
-                    <input
-                        type="checkbox"
-                        checked={isClosed}
-                        onChange={handleToggleChange}
-                    />
-                    <span className={styles.slider}></span>
-                </label>
+            <div className={styles.recruitInfo}>
+                <span className={styles.statusLabel}>모집 인원:</span>
+                <span>
+                    {teamInfo.positions.map((position) => (
+                        <span key={position.role} className={styles.position}>
+                            {position.role} {position.count}명
+                        </span>
+                    ))}
+                </span>
             </div>
 
             <div className={styles.buttonContainer}>
