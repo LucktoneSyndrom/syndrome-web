@@ -87,10 +87,10 @@ const HomePage = () => {
         <header className={styles.header}>
           <img src="/logo.png" alt="로고" className={styles.logo} />
           <nav className={styles.nav}>
-            <button onClick={() => handleNavigation('/find')}>
+            <button onClick={() => handleNavigation('/gather')}>
               <FaSearch /> 팀 찾기
             </button>
-            <button onClick={() => handleNavigation('/gather')}>
+            <button onClick={() => handleNavigation('/find')}>
               <FaUsers /> 팀원 모집
             </button>
           </nav>
