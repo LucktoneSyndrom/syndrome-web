@@ -9,8 +9,8 @@ import { useRouter } from 'next/navigation';
 const MyPage = () => {
     const router = useRouter();
 
-    const [userName, setUserName] = useState("김지범");
-    const [userStack, setUserStack] = useState("야리돌림 전문가");
+    const [userName, setUserName] = useState("홍길동");
+    const [userStack, setUserStack] = useState("프론트 개발자");
     const [temperature, setTemperature] = useState(36.5); // 초기 온도
 
     // 데이터 초기화 함수 추가

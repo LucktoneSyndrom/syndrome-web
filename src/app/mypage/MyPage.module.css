@@ -13,7 +13,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: url('./지범킴.png');
+    background-image: url('./image.png');
     background-size: cover; /* 이미지 크기를 요소 크기에 맞춤 */
     margin-right: 16px;
 }
