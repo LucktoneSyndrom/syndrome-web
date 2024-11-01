@@ -45,14 +45,14 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
         resume: "이력서",
         gather: "찾아요",
         category: "필터",
-        find:'모아요',
-        chat:'채팅',
-        mypage:'마이페이지',
-        profile:'이력서',
-        setting:'설정',
-        editmyinfo:'내 정보 수정',
-        removeuser:'회원 탈퇴',
-        
+        find: "모아요",
+        chat: "채팅",
+        mypage: "마이페이지",
+        profile: "이력서",
+        setting: "설정",
+        editmyinfo: "내 정보 수정",
+        removeuser: "회원 탈퇴",
+
         // 추가 경로 매핑
       };
 
@@ -66,6 +66,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
   const headerProps = {
     title: pageTitle,
     ...(pathname === "/gather" && { search: true }),
+    ...(pathname === "/find" && { search: true }),
   };
 
   return (

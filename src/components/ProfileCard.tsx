@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ProfileCard.module.css";
-import { Typography, Box, Grid, Stack, Divider } from "@mui/material";
+import { Typography, Box, Grid, Stack, Divider, Avatar } from "@mui/material";
 import { UserCardInfo } from "../types/ProfileCardInfo";
 import Image from "../components/Image";
 
@@ -20,10 +20,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo }) => {
     <Box sx={style.container}>
       <Grid container spacing={5}>
         <Grid item xs={3}>
-          <Image
+          <Avatar
             src={userInfo.profileImage}
             alt={`${userInfo.name}의 프로필 사진`}
-            className={styles.profileImage}
+            sx={{ marginTop: "5px", height: "80px", width: "80px" }}
           />
         </Grid>
         <Grid item xs={9}>

@@ -6,13 +6,6 @@
   margin-bottom: 20px;
 }
 
-.profileImage {
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  margin-top: 5px;
-}
-
 .info {
   flex: 1;
   display: flex;
