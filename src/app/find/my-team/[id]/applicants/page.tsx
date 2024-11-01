@@ -33,6 +33,7 @@ const mockApplicantsData: Applicant[] = [
 
 const mockProfileCardData: UserCardInfo[] = [
     {
+        id: "user-001", 
         name: "최승식",
         school: "인천대학교",
         major: "컴퓨터공학과",
@@ -40,9 +41,10 @@ const mockProfileCardData: UserCardInfo[] = [
         intro: "안녕하세요! 저는 소프트웨어 개발에 열정이 있는 컴퓨터공학과 학생입니다. 다양한 기술을 익히고 팀 프로젝트를 통해 실력을 키우고 있습니다.",
         profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084519335100.jpg",
         temperature: 36.5,
-        stack: ["Frontend", "Backend"] // 스택 정보 배열로 변경
+        stack: ["Frontend", "Backend"],
     },
     {
+        id: "user-002",
         name: "김지범",
         school: "서울대학교",
         major: "산업디자인과",
@@ -50,18 +52,19 @@ const mockProfileCardData: UserCardInfo[] = [
         intro: "디자인과 사용자 경험을 중요하게 생각하는 산업디자인과 학생입니다. 창의적인 디자인과 실용적인 UX를 결합하는 프로젝트를 주로 진행하고 있습니다.",
         profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084594554100.jpg",
         temperature: 36.7,
-        stack: ["Design", "UX"]
+        stack: ["Design", "UX"],
     },
     {
+        id: "user-003",
         name: "이승수",
         school: "카이스트",
         major: "전기전자공학과",
-        skills: ["C++", "Verilog", "Embedded Systems", "Machine Learning"],
+        skills: ["C++", "Verilog", "Embedded", "Machine Learning"],
         intro: "임베디드 시스템과 머신러닝을 전공으로 삼고 있으며, 하드웨어와 소프트웨어의 결합에 관심이 많습니다. 혁신적인 기술을 통해 문제를 해결하는 데 목표를 두고 있습니다.",
         profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084777180100.jpg",
         temperature: 36.8,
-        stack: ["Embedded", "Machine Learning"]
-    }
+        stack: ["Embedded", "Machine Learning"],
+    },
 ];
 
 const ApplicantsPage = ({ params }: { params: { id: string } }) => {

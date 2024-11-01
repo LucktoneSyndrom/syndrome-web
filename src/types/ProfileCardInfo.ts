@@ -1,5 +1,6 @@
 // src/types/ProfileCardInfo.ts
 export interface UserCardInfo {
+    id:string;
     name: string;
     school: string;
     major: string;
