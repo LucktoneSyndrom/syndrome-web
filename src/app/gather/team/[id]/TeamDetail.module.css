@@ -65,16 +65,20 @@
 }
 
 .memberImage {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background-color: #bdc3c7;
+    background-color: #dfe6e9;
     margin-right: 12px;
+    object-fit: cover;
+    aspect-ratio: 1; /* 정사각형 비율 유지 */
 }
+
 
 .memberInfo {
     font-size: 14px;
     color: #2c3e50;
+    line-height: 1.4; /* 텍스트 줄 간격 추가 */
 }
 
 .leaderInfo {
@@ -94,3 +98,20 @@
 .joinButton:hover {
     background-color: #27ae60;
 }
+.inquiryButton {
+    padding: 12px 20px;
+    background-color: #2ea7cc;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.inquiryButton:hover {
+
+    margin-left: 20px;
+    background-color: #2ea7cc;
+}
+

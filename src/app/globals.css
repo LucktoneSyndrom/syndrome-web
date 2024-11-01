@@ -5,6 +5,7 @@ body {
   font-family: 'Noto Sans KR', 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #2c3e50;
+  overflow: hidden; /* 전체 스크롤바 없애기 */
 }
 
 a {
@@ -14,4 +15,10 @@ a {
 
 * {
   box-sizing: border-box;
+  scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+}
+
+/* Chrome, Edge, Safari에서 스크롤바 숨기기 */
+*::-webkit-scrollbar {
+  display: none;
 }

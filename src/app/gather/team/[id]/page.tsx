@@ -6,10 +6,6 @@ import styles from './TeamDetail.module.css';
 import { useParams } from 'next/navigation';
 import { TeamDetailInfo } from '../../../../types/TeamDetailInfo';
 
-interface TeamDetailPageProps {
-    params: { id: string };
-}
-
 const TeamDetailPage: React.FC = () => {
     const params = useParams();
     const teamId = params.id as string;
@@ -65,7 +61,6 @@ const TeamDetailPage: React.FC = () => {
             },
         };
 
-
         setTeamDetailInfo(mockTeamDetailData);
     }, [teamId]);
 
@@ -92,8 +87,8 @@ const TeamDetailPage: React.FC = () => {
                 <h2>사용 예정 스택</h2>
                 {teamDetailInfo.techStacks.map((stack, index) => (
                     <span className={styles.techStackItem} key={index}>
-            {stack}
-          </span>
+                        {stack}
+                    </span>
                 ))}
             </div>
 
@@ -120,7 +115,10 @@ const TeamDetailPage: React.FC = () => {
                 </div>
             </div>
 
-            <button className={styles.joinButton}>지원하기</button>
+            <div className={styles.buttonContainer}>
+                <button className={styles.joinButton}>지원하기</button>
+                <button className={styles.inquiryButton}>문의하기</button>
+            </div>
         </div>
     );
 };
