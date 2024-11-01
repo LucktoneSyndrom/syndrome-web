@@ -24,9 +24,9 @@
 }
 
 .chip {
-  height: 20px;
-
-  font-size: 8.5px;
+  height: 24px;
+  font-size: 10px;
+  border-radius: 4px;
 }
 
 .infoContainer {
@@ -91,4 +91,37 @@
 
 .chatButton:hover {
   background-color: #27ae60;
+}
+
+.buttonSection {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.inquiryButton {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chatButton {
+  padding: 6px 12px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detailButton {
+  padding: 6px 12px;
+  background-color: #e67e22;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

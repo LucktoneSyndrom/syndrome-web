@@ -20,15 +20,17 @@ const TeamDetailPage: React.FC = () => {
         // 더미 데이터 사용
         const mockTeamDetailData: TeamDetailInfo = {
             id: teamId,
-            teamName: '프로젝트 A',
-            teamDescription: '멋진 프로젝트를 함께할 팀원들을 모집합니다.',
-            projectDescription: '이 프로젝트는 ...',
+            teamName: 'Innovative AI Solutions',
+            teamDescription: '최첨단 AI 솔루션을 개발할 열정적인 팀원들을 모집합니다.',
+            projectDescription: '이 프로젝트는 인공지능 기반의 예측 모델을 개발하여 다양한 산업에 응용할 수 있는 솔루션을 제공하는 것이 목표입니다. 주로 머신러닝, 딥러닝을 활용한 데이터 분석과 예측 모델 개발이 주된 작업입니다.',
             deadline: '2023-12-31',
             recruitmentParts: [
                 { partName: '백엔드', numberNeeded: 2 },
                 { partName: '프론트엔드', numberNeeded: 1 },
+                { partName: '데이터 사이언티스트', numberNeeded: 1 },
+                { partName: 'AI 엔지니어', numberNeeded: 2 },
             ],
-            techStacks: ['React', 'Node.js', 'TypeScript'],
+            techStacks: ['React', 'Node.js', 'TypeScript', 'Python', 'TensorFlow', 'Keras', 'SQL', 'Docker'],
             currentMembers: [
                 {
                     id: '1',
@@ -36,15 +38,33 @@ const TeamDetailPage: React.FC = () => {
                     partName: '팀장 / 백엔드',
                     profileImageUrl: '',
                 },
-                // 추가 멤버 정보
+                {
+                    id: '2',
+                    name: '이수민',
+                    partName: '프론트엔드',
+                    profileImageUrl: '',
+                },
+                {
+                    id: '3',
+                    name: '박재영',
+                    partName: '데이터 사이언티스트',
+                    profileImageUrl: '',
+                },
+                {
+                    id: '4',
+                    name: '김민주',
+                    partName: 'AI 엔지니어',
+                    profileImageUrl: '',
+                },
             ],
             leaderInfo: {
                 id: '1',
                 name: '홍길동',
                 profileImageUrl: '',
-                introduction: '팀장 소개 문구',
+                introduction: '10년 경력의 백엔드 개발자입니다. 주로 대규모 트래픽 처리와 시스템 최적화에 관심이 많습니다.',
             },
         };
+
 
         setTeamDetailInfo(mockTeamDetailData);
     }, [teamId]);
