@@ -42,9 +42,9 @@ const TeamItem: React.FC<TeamItemProps> = ({ teamInfo }) => {
             <div className={styles.recruitInfo}>
                 <span className={styles.statusLabel}>모집 인원:</span>
                 <span>
-                    {teamInfo.positions.map((position) => (
-                        <span key={position.role} className={styles.position}>
-                            {position.role} {position.count}명
+                    {teamInfo.recruitmentParts.map((position) => (
+                        <span key={position.partName} className={styles.position}>
+                            {position.partName} {position.numberNeeded}명
                         </span>
                     ))}
                 </span>
