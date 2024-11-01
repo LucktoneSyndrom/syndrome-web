@@ -1,70 +1,75 @@
 .profileCard {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .profileImage {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: 5px;
 }
 
 .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    line-height: 1.4; /* 줄 간격 조정 */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  line-height: 1.4; /* 줄 간격 조정 */
+  font-size: 10px;
 }
-
 
 .temperature {
-    color: coral;
-    font-size: 0.8em; /* 온도 글씨 크기 조정 */
-    margin-left: 10px;
-    font-weight: normal;
+  color: coral;
+  font-size: 1rem;
+  margin-left: 5px;
+  font-weight: bold;
 }
-
 
 .contactButton {
-    align-self: flex-end;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    margin-top: auto;
+  align-self: flex-end;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: auto;
 }
 
-.skills, .stacks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 10px;
+.skills,
+.stacks {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 .skillButton {
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    font-size: 0.9em;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.9em;
 }
 
-
 .stackButton {
-    background-color: red;
-    border: none;
-    border-radius: 20px;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    color:white;
+  background-color: red;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  color: white;
+}
+
+.stackItem,
+.skillItem {
+  display: inline-block;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
 }

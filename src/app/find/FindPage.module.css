@@ -1,58 +1,57 @@
 /* src/app/find/FindPage.module.css */
 
 .container {
-    padding: 20px;
+  padding: 20px;
+  padding-bottom: 80px;
 }
 
 .createTeamButton {
-    width: 100%;
-    padding: 16px;
-    background-color: #3498db;
-    border: none;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    margin-top: 20px; /* 여백 추가 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 16px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px; /* 여백 추가 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  transition: background-color 0.3s ease;
 }
 
 .createTeamButton:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .teamList {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .noData {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #7f8c8d;
-    text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #7f8c8d;
+  text-align: center;
 }
 
-
 .tabMenu {
-    width: 100%;
-    display: flex;
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-  
-  .tabMenu button {
-    flex: 1;
-    padding: 12px 0;
-    font-size: 16px;
-    background-color: #bdc3c7;
-    border: none;
-    color: #2c3e50;
-  }
-  
-  .tabMenu button.active {
-    background-color: #ffffff;
-    border-bottom: 2px solid #3498db;
-  }
-  
+  width: 100%;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.tabMenu button {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  background-color: #bdc3c7;
+  border: none;
+  color: #2c3e50;
+}
+
+.tabMenu button.active {
+  background-color: #ffffff;
+  border-bottom: 2px solid #3498db;
+}
