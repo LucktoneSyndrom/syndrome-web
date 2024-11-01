@@ -292,6 +292,9 @@ const GatherPage = () => {
         filterTeams();
     }, [searchQuery, selectedField, selectedStack, selectedRegion, selectedSort]);
 
+    useEffect(()=>{
+        handleSearch();
+    },[])
     const filterTeams = () => {
         // 검색어, 분야, 스택, 지역을 기반으로 필터링
         const query = searchQuery.toLowerCase();

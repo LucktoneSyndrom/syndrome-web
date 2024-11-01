@@ -6,11 +6,18 @@ import styles from './TeamDetail.module.css';
 import { useParams } from 'next/navigation';
 import { TeamDetailInfo } from '../../../../types/TeamDetailInfo';
 
+import { useRouter } from 'next/navigation';
+
 const TeamDetailPage: React.FC = () => {
     const params = useParams();
     const teamId = params.id as string;
 
+    const router = useRouter();
     const [teamDetailInfo, setTeamDetailInfo] = useState<TeamDetailInfo | null>(null);
+
+    const handleNavigation = (path: string) => {
+        router.push(path);
+    };
 
     useEffect(() => {
         // 더미 데이터 사용
@@ -117,7 +124,9 @@ const TeamDetailPage: React.FC = () => {
 
             <div className={styles.buttonContainer}>
                 <button className={styles.joinButton}>지원하기</button>
-                <button className={styles.inquiryButton}>문의하기</button>
+                <button className={styles.inquiryButton}
+                        onClick={() => handleNavigation('/chat/detail/1')}
+                >문의하기</button>
             </div>
         </div>
     );
