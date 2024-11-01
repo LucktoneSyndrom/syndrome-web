@@ -1,4 +1,5 @@
 // src/components/TeamCard.tsx
+"use client";
 
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -31,17 +32,17 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
           {teamCardInfo.shortDescription}
         </h3>
         <Stack direction="row" spacing={0.5}>
-          {teamCardInfo.collectPart.map((part, index) => (
+          {teamCardInfo.recruitmentParts.map((part, index) => (
             <Chip
               key={index}
-              label={part}
+              label={part.partName}
               className={styles.chip}
               color={
-                part === "Frontend"
+                part.partName === "Frontend"
                   ? "error"
-                  : part === "Backend"
+                  : part.partName === "Backend"
                   ? "primary"
-                  : part === "Mobile"
+                  : part.partName === "Mobile"
                   ? "success"
                   : "default"
               }
