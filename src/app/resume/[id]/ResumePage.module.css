@@ -24,3 +24,22 @@
     font-size: 16px;
     color: #7f8c8d;
 }
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.resumeContent {
+    flex: 1;
+}
