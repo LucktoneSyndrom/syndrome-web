@@ -24,7 +24,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
     router.push(`/chat/team/${teamCardInfo.id}`);
   };
 
-
   return (
     <Stack>
       <div className={styles.teamCard} onClick={handleDetailsClick}>
@@ -39,13 +38,14 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
               label={part.partName}
               className={styles.chip}
               color={
-                part.partName === "Frontend"
+                part.partName === "프론트엔드"
                   ? "error"
-                  : part.partName === "Backend"
-                    ? "primary"
-                    : part.partName === "Mobile"
-                      ? "success"
-                      : "default"
+
+                  : part.partName === "백엔드"
+                  ? "primary"
+                  : part.partName === "모바일"
+                  ? "success"
+                  : "default"
               }
             />
           ))}
@@ -73,6 +73,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
           <p className={styles.tag}>
             {teamCardInfo.tag.map((tag, index) => `#${tag}`).join(' ')}
           </p>
+
         </div>
 
         {/* 버튼 섹션 */}
