@@ -1,105 +1,108 @@
 .container {
-    padding: 24px;
-    background-color: #f9fafb;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-
-
 .applicantsList {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .applicantItem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
 .applicantItem:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .applicantImage {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #dfe6e9;
-    margin-right: 16px;
-    object-fit: cover;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #dfe6e9;
+  margin-right: 16px;
+  object-fit: cover;
 }
 
 .applicantInfoContainer {
-    display: flex;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .applicantInfo {
-    font-size: 16px;
-    color: #34495e;
-    font-weight: 500;
-    margin-right: auto;
+  font-size: 16px;
+  color: #34495e;
+  font-weight: 500;
+  margin-right: auto;
 }
 
 .buttonGroup {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .viewResumeButton,
 .contactButton,
 .addToTeamButton {
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .viewResumeButton {
-    background-color: #3498db;
-    color: #ffffff;
+  background-color: #3498db;
+  color: #ffffff;
 }
 
 .contactButton {
-    background-color: #e67e22;
-    color: #ffffff;
+  background-color: #e67e22;
+  color: #ffffff;
 }
 
 .addToTeamButton {
-    background-color: #2ecc71;
-    color: #ffffff;
+  background-color: #2ecc71;
+  color: #ffffff;
 }
 
 .viewResumeButton:hover {
-    background-color: #2980b9;
-    transform: scale(1.05);
+  background-color: #2980b9;
+  transform: scale(1.05);
 }
 
 .contactButton:hover {
-    background-color: #d35400;
-    transform: scale(1.05);
+  background-color: #d35400;
+  transform: scale(1.05);
 }
 
 .addToTeamButton:hover {
-    background-color: #27ae60;
-    transform: scale(1.05);
+  background-color: #27ae60;
+  transform: scale(1.05);
 }
 .buttonContainer {
-    display: flex;
-    justify-content: center; /* 버튼들을 중앙 정렬 */
-    gap: 10px; /* 버튼 간격 조정 (필요시) */
+  display: flex;
+  justify-content: center; /* 버튼들을 중앙 정렬 */
+  gap: 10px; /* 버튼 간격 조정 (필요시) */
+  height: 30px;
+  margin-top: 15px;
 }
