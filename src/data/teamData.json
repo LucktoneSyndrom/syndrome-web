@@ -1,0 +1,22 @@
+// data/teamData.json
+[
+  {
+    "id": "1",
+    "teamName": "Innovative AI Solutions",
+    "shortDescription": "백엔드, 프론트엔드 개발자를 모집합니다.",
+    "deadline": "2023-12-31",
+    "recruitmentParts": [
+      { "partName": "백엔드", "numberNeeded": 2 },
+      { "partName": "프론트엔드", "numberNeeded": 1 }
+    ]
+  },
+  {
+    "id": "2",
+    "teamName": "Eco-Friendly Web Solutions",
+    "shortDescription": "풀스택 개발자를 모집합니다.",
+    "deadline": "2024-01-15",
+    "recruitmentParts": [
+      { "partName": "풀스택 개발자", "numberNeeded": 2 }
+    ]
+  }
+]

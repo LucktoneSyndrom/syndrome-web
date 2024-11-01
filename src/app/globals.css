@@ -5,7 +5,12 @@ body {
   font-family: 'Noto Sans KR', 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #2c3e50;
-  overflow: hidden; /* 전체 스크롤바 없애기 */
+  /*overflow: auto;*/
+  /*scrollbar-width: none; !* Firefox *!*/
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 a {
@@ -15,10 +20,13 @@ a {
 
 * {
   box-sizing: border-box;
-  scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+  /*scrollbar-width: none; !* Firefox에서 스크롤바 숨기기 *!*/
 }
 
-/* Chrome, Edge, Safari에서 스크롤바 숨기기 */
-*::-webkit-scrollbar {
-  display: none;
+/*!* Chrome, Edge, Safari에서 스크롤바 숨기기 *!*/
+/**::-webkit-scrollbar {*/
+/*  display: none;*/
+/*}*/
+.className{
+  margin-bottom: 200px;
 }
