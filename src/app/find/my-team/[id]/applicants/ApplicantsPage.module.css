@@ -1,58 +1,72 @@
-/* src/app/find/my-team/[id]/applicants/ApplicantsPage.module.css */
-
 .container {
-    padding: 20px;
+    padding: 24px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .applicantsList {
-    margin-top: 20px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .applicantItem {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.applicantItem:hover {
+    transform: scale(1.02);
 }
 
 .applicantImage {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background-color: #bdc3c7;
-    margin-right: 12px;
+    background-color: #dfe6e9;
+    margin-right: 16px;
 }
 
 .applicantInfo {
-    font-size: 14px;
-    color: #2c3e50;
+    font-size: 15px;
+    color: #34495e;
+    font-weight: 500;
 }
 
 .viewResumeButton,
 .contactButton,
 .addToTeamButton {
-    margin-left: auto;
-    padding: 8px 12px;
+    padding: 8px 16px;
     font-size: 14px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .viewResumeButton {
     background-color: #3498db;
     color: #ffffff;
+    margin-left: auto;
 }
 
 .contactButton {
     background-color: #e67e22;
     color: #ffffff;
-    margin-left: 8px;
+    margin-left: 10px;
 }
 
 .addToTeamButton {
     background-color: #2ecc71;
     color: #ffffff;
-    margin-left: 8px;
+    margin-left: 10px;
 }
 
 .viewResumeButton:hover {
