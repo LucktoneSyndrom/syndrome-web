@@ -1,4 +1,5 @@
 // src/components/TeamCard.tsx
+"use client";
 
 import React from "react";
 import { useRouter } from "next/navigation";
@@ -25,35 +26,35 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
 
 
   return (
-      <Stack className={styles.teamCardContainer}>
-        <div className={styles.teamCard} onClick={handleDetailsClick}>
-          <p className={styles.teamName}>{teamCardInfo.teamName}</p>
-          <h3 className={styles.shortDescription}>
-            {teamCardInfo.shortDescription}
-          </h3>
-          <Stack direction="row" spacing={0.5} className={styles.chipContainer}>
-            {teamCardInfo.collectPart.map((part, index) => (
-                <Chip
-                    key={index}
-                    label={part}
-                    className={styles.chip}
-                    color={
-                      part === "Frontend"
-                          ? "error"
-                          : part === "Backend"
-                              ? "primary"
-                              : part === "Mobile"
-                                  ? "success"
-                                  : "default"
-                    }
-                />
-            ))}
-          </Stack>
-          <div className={styles.infoContainer}>
-            <div className={styles.recruitmentParts}>
-              <span className={styles.recruitmentPartLabel}>모집 인원:</span>
-              {teamCardInfo.recruitmentParts.map((part, index) => (
-                  <span className={styles.recruitmentPart} key={index}>
+    <Stack>
+      <div className={styles.teamCard} onClick={handleDetailsClick}>
+        <p className={styles.teamName}>{teamCardInfo.teamName}</p>
+        <h3 className={styles.shortDescription}>
+          {teamCardInfo.shortDescription}
+        </h3>
+        <Stack direction="row" spacing={0.5}>
+          {teamCardInfo.recruitmentParts.map((part, index) => (
+            <Chip
+              key={index}
+              label={part.partName}
+              className={styles.chip}
+              color={
+                part.partName === "Frontend"
+                  ? "error"
+                  : part.partName === "Backend"
+                  ? "primary"
+                  : part.partName === "Mobile"
+                  ? "success"
+                  : "default"
+              }
+            />
+          ))}
+        </Stack>
+        <div className={styles.infoContainer}>
+          <div className={styles.recruitmentParts}>
+            <span className={styles.recruitmentPartLabel}>모집 인원: </span>
+            {teamCardInfo.recruitmentParts.map((part, index) => (
+              <span className={styles.recruitmentPart} key={index}>
                 {part.partName} {part.numberNeeded}명
                     {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
               </span>

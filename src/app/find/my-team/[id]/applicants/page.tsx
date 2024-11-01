@@ -4,6 +4,8 @@
 import React from 'react';
 import styles from './ApplicantsPage.module.css';
 import { useRouter } from 'next/navigation';
+import ProfileCard from '../../../../../components/ProfileCard'
+
 
 interface Applicant {
     id: string;
@@ -26,6 +28,40 @@ const mockApplicantsData: Applicant[] = [
         profileImageUrl: '',
     },
     // 추가 지원자 데이터
+];
+
+
+const mockProfileCardData: UserCardInfo[] = [
+    {
+        name: "최승식",
+        school: "인천대학교",
+        major: "컴퓨터공학과",
+        skills: ["JavaScript", "React", "TypeScript", "Python"],
+        intro: "안녕하세요! 저는 소프트웨어 개발에 열정이 있는 컴퓨터공학과 학생입니다. 다양한 기술을 익히고 팀 프로젝트를 통해 실력을 키우고 있습니다.",
+        profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084519335100.jpg",
+        temperature: 36.5,
+        stack: ["Frontend", "Backend"] // 스택 정보 배열로 변경
+    },
+    {
+        name: "김지범",
+        school: "서울대학교",
+        major: "산업디자인과",
+        skills: ["Photoshop", "Illustrator", "Figma", "UI/UX"],
+        intro: "디자인과 사용자 경험을 중요하게 생각하는 산업디자인과 학생입니다. 창의적인 디자인과 실용적인 UX를 결합하는 프로젝트를 주로 진행하고 있습니다.",
+        profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084594554100.jpg",
+        temperature: 36.7,
+        stack: ["Design", "UX"]
+    },
+    {
+        name: "이승수",
+        school: "카이스트",
+        major: "전기전자공학과",
+        skills: ["C++", "Verilog", "Embedded Systems", "Machine Learning"],
+        intro: "임베디드 시스템과 머신러닝을 전공으로 삼고 있으며, 하드웨어와 소프트웨어의 결합에 관심이 많습니다. 혁신적인 기술을 통해 문제를 해결하는 데 목표를 두고 있습니다.",
+        profileImage: "https://cse.inu.ac.kr/sites/isis/atchmnfl/profl/1675/temp_1709084777180100.jpg",
+        temperature: 36.8,
+        stack: ["Embedded", "Machine Learning"]
+    }
 ];
 
 const ApplicantsPage = ({ params }: { params: { id: string } }) => {
@@ -52,35 +88,35 @@ const ApplicantsPage = ({ params }: { params: { id: string } }) => {
         <div className={styles.container}>
             <h1>지원자 목록</h1>
             <section className={styles.applicantsList}>
-                {mockApplicantsData.map((applicant) => (
-                    <div className={styles.applicantItem} key={applicant.id}>
-                        <div className={styles.applicantImage}></div>
-                        <div className={styles.applicantInfo}>
-                            {applicant.name} - {applicant.partName}
+                {mockProfileCardData.map((user) => (
+                    <div key={user.name} className={styles.profileCardContainer}>
+                        <ProfileCard userInfo={user} />
+                        <div className={styles.buttonContainer}>
+                            <button
+                                className={styles.viewResumeButton}
+                                onClick={() => handleViewResume(user.id)} // 수정된 부분
+                            >
+                                이력서 보기
+                            </button>
+                            <button
+                                className={styles.contactButton}
+                                onClick={() => handleContact(user.id)} // 수정된 부분
+                            >
+                                연락하기
+                            </button>
+                            <button
+                                className={styles.addToTeamButton}
+                                onClick={() => handleAddToTeam(user.id)} // 수정된 부분
+                            >
+                                팀으로 만들기
+                            </button>
                         </div>
-                        <button
-                            className={styles.viewResumeButton}
-                            onClick={() => handleViewResume(applicant.id)}
-                        >
-                            이력서 보기
-                        </button>
-                        <button
-                            className={styles.contactButton}
-                            onClick={() => handleContact(applicant.id)}
-                        >
-                            연락하기
-                        </button>
-                        <button
-                            className={styles.addToTeamButton}
-                            onClick={() => handleAddToTeam(applicant.id)}
-                        >
-                            팀으로 만들기
-                        </button>
                     </div>
                 ))}
             </section>
         </div>
     );
+    
 };
 
 export default ApplicantsPage;

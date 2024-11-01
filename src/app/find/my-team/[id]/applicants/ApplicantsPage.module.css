@@ -80,3 +80,8 @@
 .addToTeamButton:hover {
     background-color: #27ae60;
 }
+.buttonContainer {
+    display: flex;
+    justify-content: center; /* 버튼들을 중앙 정렬 */
+    gap: 10px; /* 버튼 간격 조정 (필요시) */
+}
