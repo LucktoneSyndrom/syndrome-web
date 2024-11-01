@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Select, Box, Stack, InputLabel, FormControl } from "@mui/material";
 import { styled } from "@mui/system";
 
@@ -30,10 +31,12 @@ const style = {
   },
   select: {
     height: "35px",
+    borderRadius: "10px",
   },
 };
 
 const Category = () => {
+  const router = useRouter();
   return (
     <Box sx={style.container}>
       <Stack spacing={2} direction="row" sx={style.stack}>
