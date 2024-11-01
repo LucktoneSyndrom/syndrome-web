@@ -6,7 +6,7 @@ import styles from "./GatherPage.module.css";
 import Header from "../../components/Header";
 import TeamCard from "../../components/TeamCard";
 import { TeamCardInfo } from "../../types/TeamCardInfo";
-
+import Category from "../../components/Category";
 const mockTeamCardData: TeamCardInfo[] = [
   {
     id: "1",
@@ -56,7 +56,6 @@ const GatherPage = () => {
 
   return (
     <div className={styles.container}>
-      <Header title="찾아요" search />
       {/* Tab Menu */}
       <div className={styles.tabMenu}>
         <button
@@ -77,6 +76,7 @@ const GatherPage = () => {
       <section className={styles.listSection}>
         {tab === "team" ? (
           <>
+            <Category />
             {mockTeamCardData.length > 0 ? (
               <div className={styles.teamCardList}>
                 {mockTeamCardData.map((team) => (
