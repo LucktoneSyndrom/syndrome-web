@@ -6,6 +6,7 @@ import Image from "../components/Image";
 
 interface ProfileCardProps {
   userInfo: UserCardInfo;
+  divider?: boolean;
 }
 
 const style = {
@@ -15,7 +16,7 @@ const style = {
   },
 };
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo }) => {
+const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo, divider }) => {
   return (
     <Box sx={style.container}>
       <Grid container spacing={5}>
@@ -73,7 +74,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo }) => {
           </div>
         </Grid>
       </Grid>
-      <Divider sx={{ pt: "20px" }} />
+      {divider && <Divider sx={{ pt: "20px" }} />}
     </Box>
   );
 };
