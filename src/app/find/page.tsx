@@ -14,7 +14,7 @@ import ProfileCard from '../../components/ProfileCard'
 
 const mockMyTeamsData: TeamCardInfo[] = [
     {
-        id: '1',
+        id: 'team-001',
         teamName: '내가 만든 프로젝트 1',
         shortDescription: '프로젝트 설명 1',
         deadline: '2023-12-31',

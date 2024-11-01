@@ -52,6 +52,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
         setting:'설정',
         editmyinfo:'내 정보 수정',
         removeuser:'회원 탈퇴',
+        edit:'이력서 수정'
         
         // 추가 경로 매핑
       };
