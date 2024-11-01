@@ -1,22 +1,34 @@
-// data/teamData.json
 [
   {
     "id": "1",
     "teamName": "Innovative AI Solutions",
     "shortDescription": "백엔드, 프론트엔드 개발자를 모집합니다.",
+    "teamDescription": "최첨단 AI 솔루션을 개발할 열정적인 팀원들을 모집합니다.",
+    "projectDescription": "인공지능 기반의 예측 모델을 개발하여 다양한 산업에 응용할 수 있는 솔루션을 제공하는 것이 목표입니다.",
     "deadline": "2023-12-31",
+    "deadlineDay": 7,
+    "tag": ["AI", "Machine Learning"],
+    "collectPart": ["Backend", "Frontend", "Data Scientist", "AI Engineer"],
     "recruitmentParts": [
       { "partName": "백엔드", "numberNeeded": 2 },
-      { "partName": "프론트엔드", "numberNeeded": 1 }
-    ]
-  },
-  {
-    "id": "2",
-    "teamName": "Eco-Friendly Web Solutions",
-    "shortDescription": "풀스택 개발자를 모집합니다.",
-    "deadline": "2024-01-15",
-    "recruitmentParts": [
-      { "partName": "풀스택 개발자", "numberNeeded": 2 }
-    ]
+      { "partName": "프론트엔드", "numberNeeded": 1 },
+      { "partName": "데이터 사이언티스트", "numberNeeded": 1 },
+      { "partName": "AI 엔지니어", "numberNeeded": 2 }
+    ],
+    "techStacks": ["React", "Node.js", "TypeScript", "Python", "TensorFlow", "Keras", "SQL", "Docker"],
+    "currentMembers": [
+      { "id": "1", "name": "홍길동", "partName": "팀장 / 백엔드", "profileImageUrl": "" },
+      { "id": "2", "name": "이수민", "partName": "프론트엔드", "profileImageUrl": "" },
+      { "id": "3", "name": "박재영", "partName": "데이터 사이언티스트", "profileImageUrl": "" },
+      { "id": "4", "name": "김민주", "partName": "AI 엔지니어", "profileImageUrl": "" }
+    ],
+    "leaderInfo": {
+      "id": "1",
+      "name": "홍길동",
+      "partName": "팀장 / 백엔드",
+      "profileImageUrl": "",
+      "introduction": "10년 경력의 백엔드 개발자입니다. 주로 대규모 트래픽 처리와 시스템 최적화에 관심이 많습니다."
+    },
+    "isSelected": true
   }
 ]

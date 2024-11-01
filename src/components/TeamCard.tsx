@@ -1,11 +1,13 @@
 // src/components/TeamCard.tsx
-"use client";
 
-import React from "react";
-import { useRouter } from "next/navigation";
-import { Chip, Stack, Divider } from "@mui/material";
-import styles from "./TeamCard.module.css";
-import { TeamCardInfo } from "../types/TeamCardInfo";
+'use client';
+
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import { Chip } from '@mui/material';
+import Image from 'next/image';
+import styles from './TeamCard.module.css';
+import { TeamCardInfo } from '../../types/TeamCardInfo';
 
 interface TeamCardProps {
   teamCardInfo: TeamCardInfo;
@@ -25,70 +27,56 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
   };
 
   return (
-    <Stack>
-      <div className={styles.teamCard} onClick={handleDetailsClick}>
-        <p className={styles.teamName}>{teamCardInfo.teamName}</p>
-        <h3 className={styles.shortDescription}>
-          {teamCardInfo.shortDescription}
-        </h3>
-        <Stack direction="row" spacing={0.5}>
-          {teamCardInfo.recruitmentParts.map((part, index) => (
-            <Chip
-              key={index}
-              label={part.partName}
-              className={styles.chip}
-              color={
-                part.partName === "프론트엔드"
-                  ? "error"
+      <div
+          className={styles.teamCardContainer}
+          onClick={handleDetailsClick}
+          role="button"
+          tabIndex={0}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') handleDetailsClick();
+          }}
+          aria-label={`팀 ${teamCardInfo.teamName} 자세히 보기`}
+      >
+        {/* Content Section */}
+        <div className={styles.contentContainer}>
+          <h3 className={styles.teamName}>{teamCardInfo.teamName}</h3>
+          <p className={styles.shortDescription}>{teamCardInfo.shortDescription}</p>
 
-                  : part.partName === "백엔드"
-                  ? "primary"
-                  : part.partName === "모바일"
-                  ? "success"
-                  : "default"
-              }
-            />
-          ))}
-        </Stack>
-        <div className={styles.infoContainer}>
+          {/* Recruitment Parts */}
           <div className={styles.recruitmentParts}>
-            <span className={styles.recruitmentPartLabel}>모집 인원: </span>
             {teamCardInfo.recruitmentParts.map((part, index) => (
-              <span className={styles.recruitmentPart} key={index}>
-                {part.partName} {part.numberNeeded}명
-                {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
-              </span>
+                <span key={index} className={styles.recruitmentPart}>
+              {part.partName} {part.numberNeeded}명
+            </span>
             ))}
           </div>
-          <Divider orientation="vertical" flexItem className={styles.divider} />
-          <div className={styles.deadlineContainer}>
-            <span className={styles.deadline}>
-              모집 기간: {teamCardInfo.deadline}
-            </span>
-            <span className={styles.deadlineDay}>
-              D-{teamCardInfo.deadlineDay}
-            </span>
-          </div>
-          <Divider orientation="vertical" flexItem className={styles.divider} />
-          <p className={styles.tag}>
-            {teamCardInfo.tag.map((tag, index) => `#${tag}`).join(' ')}
-          </p>
 
+          {/* Tags */}
+          <div className={styles.tagContainer}>
+            {teamCardInfo.tag.map((tag, index) => (
+                <Chip key={index} label={`#${tag}`} className={styles.tag} />
+            ))}
+          </div>
+
+          {/* Recruitment Deadline */}
+          <div className={styles.deadlineContainer}>
+            <span className={styles.deadlineDay}>D-{teamCardInfo.deadlineDay}</span>
+          </div>
         </div>
 
-        {/* 버튼 섹션 */}
-        <div className={styles.buttonSection}>
-
-          {isSelected && (
-            <>
-              <button className={styles.chatButton} onClick={handleChatClick}>
-                팀 채팅
-              </button>
-            </>
-          )}
+        {/* Image Section */}
+        <div className={styles.imageContainer}>
+          <Image
+              src="/images/teams/1.jpg"
+              alt={`${teamCardInfo.teamName} 이미지`}
+              className={styles.teamImage}
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL="/images/teams/1.jpg"
+          />
         </div>
       </div>
-    </Stack>
   );
 };
 

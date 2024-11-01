@@ -1,66 +1,122 @@
-/* src/app/gather/GatherPage.module.css */
+/* src/styles/GatherPage.module.css */
 
 .container {
   padding: 20px;
   padding-bottom: 60px;
   padding-top: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.nav button:hover {
+  color: #007bff;
+}
+
+.nav button svg {
+  margin-right: 8px;
 }
 
 .tabMenu {
-  width: 100%;
   display: flex;
-  margin-top: 0px;
+  margin-top: 20px;
+  border-bottom: 2px solid #bdc3c7;
 }
 
 .tabMenu button {
   flex: 1;
   padding: 12px 0;
   font-size: 16px;
-  background-color: #bdc3c7;
+  background-color: #ecf0f1;
   border: none;
+  cursor: pointer;
   color: #2c3e50;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.tabMenu button:hover {
+  background-color: #dcdcdc;
 }
 
 .tabMenu button.active {
   background-color: #ffffff;
   border-bottom: 2px solid #3498db;
+  color: #3498db;
+}
+
+.searchBar {
+  display: flex;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #3498db;
+}
+
+.searchButton {
+  padding: 10px 16px;
+  border: 1px solid #bdc3c7;
+  border-left: none;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #2980b9;
 }
 
 .listSection {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
-.card {
-  background-color: #ffffff;
-  border: 1px solid #bdc3c7;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.card h3 {
-  font-size: 18px;
+.subSectionTitle {
+  font-size: 22px;
+  margin-bottom: 20px;
   color: #2c3e50;
-}
-
-.card p {
-  font-size: 14px;
-  color: #7f8c8d;
-  margin-top: 8px;
-}
-
-.card button {
-  margin-top: 12px;
-  padding: 12px 20px;
-  background-color: #3498db;
-  border: none;
-  border-radius: 4px;
-  color: #ffffff;
-  cursor: pointer;
 }
 
 .teamCardList {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .noData {
@@ -70,65 +126,48 @@
   text-align: center;
 }
 
-.tabMenu {
-  display: flex;
-  margin-top: 20px;
-}
-
-.tabMenu button {
-  flex: 1;
-  padding: 12px 0;
-  font-size: 16px;
-  background-color: #bdc3c7;
-  border: none;
-  color: #2c3e50;
-}
-
-.tabMenu button.active {
-  background-color: #ffffff;
-  border-bottom: 2px solid #3498db;
-}
-
-.listSection {
-  margin-top: 20px;
-}
-
-.noData {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #7f8c8d;
+.footer {
   text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 14px;
 }
 
-.buttonSection {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-}
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .nav button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 
-.inquiryButton {
-  padding: 6px 12px;
-  background-color: #3498db;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  .tabMenu {
+    flex-direction: column;
+    border-bottom: none;
+    border-top: 2px solid #bdc3c7;
+  }
 
-.chatButton {
-  padding: 6px 12px;
-  background-color: #2ecc71;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  .tabMenu button {
+    border-bottom: 1px solid #bdc3c7;
+  }
 
-.detailButton {
-  padding: 6px 12px;
-  background-color: #e67e22;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  .tabMenu button.active {
+    border-bottom: 2px solid #3498db;
+    border-top: none;
+  }
+
+  .searchBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchInput {
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 8px;
+  }
+
+  .searchButton {
+    border-radius: 0 0 4px 4px;
+    border-left: 1px solid #bdc3c7;
+  }
 }
