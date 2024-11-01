@@ -24,7 +24,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
     router.push(`/chat/team/${teamCardInfo.id}`);
   };
 
-
   return (
     <Stack>
       <div className={styles.teamCard} onClick={handleDetailsClick}>
@@ -39,11 +38,11 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
               label={part.partName}
               className={styles.chip}
               color={
-                part.partName === "Frontend"
+                part.partName === "프론트엔드"
                   ? "error"
-                  : part.partName === "Backend"
+                  : part.partName === "백엔드"
                   ? "primary"
-                  : part.partName === "Mobile"
+                  : part.partName === "모바일"
                   ? "success"
                   : "default"
               }
@@ -56,36 +55,35 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
             {teamCardInfo.recruitmentParts.map((part, index) => (
               <span className={styles.recruitmentPart} key={index}>
                 {part.partName} {part.numberNeeded}명
-                    {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
+                {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
               </span>
-              ))}
-            </div>
-            <Divider orientation="vertical" flexItem className={styles.divider} />
-            <div className={styles.deadlineContainer}>
+            ))}
+          </div>
+          <Divider orientation="vertical" flexItem className={styles.divider} />
+          <div className={styles.deadlineContainer}>
             <span className={styles.deadline}>
               모집 기간: {teamCardInfo.deadline}
             </span>
-              <span className={styles.deadlineDay}>
+            <span className={styles.deadlineDay}>
               D-{teamCardInfo.deadlineDay}
             </span>
-            </div>
-            <Divider orientation="vertical" flexItem className={styles.divider} />
-            <p className={styles.tag}>#{teamCardInfo.tag.join(", ")}</p>
           </div>
-
-          {/* 버튼 섹션 */}
-          <div className={styles.buttonSection}>
-
-            {isSelected && (
-                <>
-                  <button className={styles.chatButton} onClick={handleChatClick}>
-                    팀 채팅
-                  </button>
-                </>
-            )}
-          </div>
+          <Divider orientation="vertical" flexItem className={styles.divider} />
+          <p className={styles.tag}>#{teamCardInfo.tag.join(", ")}</p>
         </div>
-      </Stack>
+
+        {/* 버튼 섹션 */}
+        <div className={styles.buttonSection}>
+          {isSelected && (
+            <>
+              <button className={styles.chatButton} onClick={handleChatClick}>
+                팀 채팅
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    </Stack>
   );
 };
 
