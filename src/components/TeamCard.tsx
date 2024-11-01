@@ -7,54 +7,66 @@ import styles from "./TeamCard.module.css";
 import { TeamCardInfo } from "../types/TeamCardInfo";
 
 interface TeamCardProps {
-    teamCardInfo: TeamCardInfo;
-    isSelected?: boolean;
+  teamCardInfo: TeamCardInfo;
+  isSelected?: boolean;
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
-    const router = useRouter();
+  const router = useRouter();
 
-    const handleDetailsClick = () => {
-        router.push(`/gather/team/${teamCardInfo.id}`);
-    };
+  const handleDetailsClick = () => {
+    router.push(`/gather/team/${teamCardInfo.id}`);
+  };
 
-    const handleChatClick = (e: React.MouseEvent) => {
-        e.stopPropagation(); // 부모 요소 클릭 방지
-        router.push(`/chat/team/${teamCardInfo.id}`);
-    };
+  const handleChatClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // 부모 요소 클릭 방지
+    router.push(`/chat/team/${teamCardInfo.id}`);
+  };
 
-    return (
-        <div className={styles.teamCard} onClick={handleDetailsClick}>
-            <h3 className={styles.shortDescription}>
-                {teamCardInfo.shortDescription}
-            </h3>
-            <Chip label={teamCardInfo.collectPart} className={styles.chip} />
-            <p className={styles.teamName}>{teamCardInfo.teamName}</p>
+  return (
+    <div className={styles.teamCard} onClick={handleDetailsClick}>
+      <h3 className={styles.shortDescription}>
+        {teamCardInfo.shortDescription}
+      </h3>
+      <Chip
+        label={teamCardInfo.collectPart}
+        className={styles.chip}
+        color={
+          teamCardInfo.collectPart === "Frontend"
+            ? "error"
+            : teamCardInfo.collectPart === "Backend"
+            ? "primary"
+            : teamCardInfo.collectPart === "Mobile"
+            ? "success"
+            : "default"
+        }
+      />
+      <p className={styles.teamName}>{teamCardInfo.teamName}</p>
 
-            <div className={styles.recruitmentParts}>
-                <span className={styles.recruitmentPartLabel}>모집 인원: </span>
-                {teamCardInfo.recruitmentParts.map((part, index) => (
-                    <span className={styles.recruitmentPart} key={index}>
+      <div className={styles.recruitmentParts}>
+        <span className={styles.recruitmentPartLabel}>모집 인원: </span>
+        {teamCardInfo.recruitmentParts.map((part, index) => (
+          <span className={styles.recruitmentPart} key={index}>
             {part.partName} {part.numberNeeded}명
-                        {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
+            {index < teamCardInfo.recruitmentParts.length - 1 && ", "}
           </span>
-                ))}
-            </div>
+        ))}
+      </div>
 
-            <div className={styles.deadlineContainer}>
+      <div className={styles.deadlineContainer}>
         <span className={styles.deadline}>
           모집 기간: {teamCardInfo.deadline}
         </span>
-                <span className={styles.deadlineDay}>D-{teamCardInfo.deadlineDay}</span>
-            </div>
-            <p className={styles.tag}># {teamCardInfo.tag}</p>
-            {isSelected && (
-                <button className={styles.chatButton} onClick={handleChatClick}>
-                    팀 채팅
-                </button>
-            )}
-        </div>
-    );
+        <span className={styles.deadlineDay}>D-{teamCardInfo.deadlineDay}</span>
+      </div>
+      <p className={styles.tag}># {teamCardInfo.tag}</p>
+      {isSelected && (
+        <button className={styles.chatButton} onClick={handleChatClick}>
+          팀 채팅
+        </button>
+      )}
+    </div>
+  );
 };
 
 export default TeamCard;
