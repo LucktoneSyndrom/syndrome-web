@@ -106,8 +106,6 @@ const MyPage = () => {
 
             {/* 온도 조정 버튼 (테스트용) */}
             <div className={styles.temperatureControls}>
-                <button onClick={increaseTemperature}>온도 상승</button>
-                <button onClick={decreaseTemperature}>온도 하락</button>
             </div>
 
             {/* 메뉴 리스트 */}

@@ -40,6 +40,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
               color={
                 part.partName === "프론트엔드"
                   ? "error"
+
                   : part.partName === "백엔드"
                   ? "primary"
                   : part.partName === "모바일"
@@ -69,11 +70,15 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
             </span>
           </div>
           <Divider orientation="vertical" flexItem className={styles.divider} />
-          <p className={styles.tag}>#{teamCardInfo.tag.join(", ")}</p>
+          <p className={styles.tag}>
+            {teamCardInfo.tag.map((tag, index) => `#${tag}`).join(' ')}
+          </p>
+
         </div>
 
         {/* 버튼 섹션 */}
         <div className={styles.buttonSection}>
+
           {isSelected && (
             <>
               <button className={styles.chatButton} onClick={handleChatClick}>

@@ -107,7 +107,10 @@ const FindPage = () => {
                 </>
             ) : (   //멤버 찾기
                 <>
-                    <Category />
+                    <div style={{ marginBottom: '20px' }}>
+                        <Category />
+
+                    </div>
 
                     {mockProfileCardData.map((user) => (
 
