@@ -3,9 +3,11 @@
 .container {
   padding: 20px;
   padding-bottom: 60px;
+  padding-top: 50px;
 }
 
 .tabMenu {
+  width: 100%;
   display: flex;
   margin-top: 20px;
 }

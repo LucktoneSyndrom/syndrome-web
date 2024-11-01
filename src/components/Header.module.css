@@ -1,29 +1,45 @@
 /* src/components/Header.module.css */
 
 .header {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #bdc3c7;
-    padding: 0 16px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #bdc3c7;
+  margin-left: -20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .backButton {
-    font-size: 24px;
-    color: #2c3e50;
-    cursor: pointer;
-    margin-right: 16px;
-    background: none;
-    border: none;
+  font-size: 24px;
+  color: #2c3e50;
+  cursor: pointer;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-top: 5px;
+  background: none;
+  border: none;
 }
 
 .pageTitle {
-    font-size: 18px;
-    color: #2c3e50;
-    flex: 1;
+  font-size: 18px;
+  color: #2c3e50;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  margin-right: 65px;
+}
+
+.searchButton {
+  font-size: 24px;
+  color: #2c3e50;
+  border: none;
+  background: none;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  margin-top: 3px;
 }

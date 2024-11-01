@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import styles from "./GatherPage.module.css";
+import Header from "../../components/Header";
 import TeamCard from "../../components/TeamCard";
 import { TeamCardInfo } from "../../types/TeamCardInfo";
 
@@ -55,6 +56,7 @@ const GatherPage = () => {
 
   return (
     <div className={styles.container}>
+      <Header title="찾아요" search />
       {/* Tab Menu */}
       <div className={styles.tabMenu}>
         <button
