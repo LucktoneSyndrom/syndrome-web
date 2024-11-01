@@ -17,7 +17,6 @@ const MyTeamPage = () => {
             recruitmentParts: [
                 { partName: '프론트엔드 개발자', numberNeeded: 2 },
                 { partName: '백엔드 개발자', numberNeeded: 2 },
-                { partName: 'UI/UX 디자이너', numberNeeded: 1 },
             ],
         },
         {
@@ -30,7 +29,6 @@ const MyTeamPage = () => {
             person: 4,
             tag: ['데이터', '분석', '통찰'], // 배열 형태로 변경
             recruitmentParts: [
-                { partName: '데이터 분석가', numberNeeded: 2 },
                 { partName: '머신러닝 엔지니어', numberNeeded: 1 },
                 { partName: '데이터 엔지니어', numberNeeded: 1 },
             ],
