@@ -13,7 +13,6 @@ interface Team {
   deadline: string; // ISO 8601 형식의 날짜 문자열
   deadlineDay: number;
   collectPart: string[];
-  person: number;
   tag: string[];
   recruitmentParts: RecruitmentPart[];
 }
