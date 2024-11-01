@@ -13,7 +13,18 @@ const CustomSelect = ({ labelId, label, ...props }) => (
     <CustomInputLabel id={labelId} shrink>
       {label}
     </CustomInputLabel>
-    <Select labelId={labelId} sx={style.select} {...props} />
+    <Select
+      labelId={labelId}
+      sx={{
+        height: "35px",
+        borderRadius: "10px",
+        cursor: "pointer",
+        "& .MuiSelect-select": {
+          pointerEvents: "none",
+        },
+      }}
+      {...props}
+    />
   </FormControl>
 );
 
@@ -37,13 +48,28 @@ const style = {
 
 const Category = () => {
   const router = useRouter();
+  const handleClick = () => {
+    router.push(`/category`);
+  };
   return (
     <Box sx={style.container}>
       <Stack spacing={2} direction="row" sx={style.stack}>
-        <CustomSelect labelId="region-label" label="지역" />
-        <CustomSelect labelId="category-label" label="분야" />
-        <CustomSelect labelId="type-label" label="스택" />
-        <CustomSelect labelId="status-label" label="정렬순" />
+        <CustomSelect
+          labelId="region-label"
+          label="지역"
+          onClick={handleClick}
+        />
+        <CustomSelect
+          labelId="category-label"
+          label="분야"
+          onClick={handleClick}
+        />
+        <CustomSelect labelId="type-label" label="스택" onClick={handleClick} />
+        <CustomSelect
+          labelId="status-label"
+          label="정렬순"
+          onClick={handleClick}
+        />
       </Stack>
     </Box>
   );

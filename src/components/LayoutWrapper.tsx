@@ -44,6 +44,7 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children }) => {
         detail: "채팅 상세",
         resume: "이력서",
         gather: "찾아요",
+        category: "필터",
         // 추가 경로 매핑
       };
 
