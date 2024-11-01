@@ -1,59 +1,64 @@
 /* src/components/TeamCard.module.css */
 
 .teamCard {
-  background-color: #ffffff;
-  border: 1px solid #bdc3c7;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 12px;
+  border-bottom: 1px solid #bdc3c7;
+  padding: 3px;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
 }
 
 .teamCard:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #dcdcdc;
 }
 
 .teamName {
   font-size: 14px;
   color: #7f8c8d;
-  margin-top: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .shortDescription {
   font-size: 16px;
   color: #2c3e50;
-  margin-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .chip {
-  margin-top: 4px;
+  height: 20px;
+
+  font-size: 8.5px;
 }
 
+.infoContainer {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 3px;
+}
 .deadlineContainer {
   display: flex;
   align-items: center;
-  margin-top: 8px;
 }
 
 .deadline {
-  font-size: 12px;
+  font-size: 8.5px;
   color: #2c3e50;
+  margin-left: 2px;
 }
 
 .deadlineDay {
-  font-size: 12px;
+  font-size: 8.5px;
   color: #e74c3c;
   margin-left: 6px;
   font-weight: bold;
+  margin-top: 1.4px;
+  margin-right: 4px;
 }
 
 .recruitmentParts {
-  margin-top: 6px;
-  display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 8.5px;
 }
 
 .recruitmentPartLabel {
@@ -68,9 +73,10 @@
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 8.5px;
   color: #3498db;
-  margin-top: 8px;
+  padding-top: 1px;
+  margin-left: 4px;
 }
 
 .chatButton {
@@ -81,7 +87,6 @@
   color: #ffffff;
   cursor: pointer;
   font-size: 12px;
-  margin-top: 8px;
 }
 
 .chatButton:hover {
