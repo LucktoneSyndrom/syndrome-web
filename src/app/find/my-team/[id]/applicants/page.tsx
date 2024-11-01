@@ -86,7 +86,6 @@ const ApplicantsPage = ({ params }: { params: { id: string } }) => {
 
     return (
         <div className={styles.container}>
-            <h1>지원자 목록</h1>
             <section className={styles.applicantsList}>
                 {mockProfileCardData.map((user) => (
                     <div key={user.name} className={styles.profileCardContainer}>

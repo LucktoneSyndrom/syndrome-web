@@ -13,7 +13,7 @@ const MyTeamPage = () => {
             deadlineDay: 30,
             collectPart: '프론트엔드 개발자, 백엔드 개발자',
             person: 5,
-            tag: '개발, 팀워크, 혁신',
+            tag: ['개발', '팀워크', '혁신'], // 배열 형태로 변경
             recruitmentParts: [
                 { partName: '프론트엔드 개발자', numberNeeded: 2 },
                 { partName: '백엔드 개발자', numberNeeded: 2 },
@@ -28,7 +28,7 @@ const MyTeamPage = () => {
             deadlineDay: 30,
             collectPart: '데이터 분석가, 머신러닝 엔지니어',
             person: 4,
-            tag: '데이터, 분석, 통찰',
+            tag: ['데이터', '분석', '통찰'], // 배열 형태로 변경
             recruitmentParts: [
                 { partName: '데이터 분석가', numberNeeded: 2 },
                 { partName: '머신러닝 엔지니어', numberNeeded: 1 },
@@ -43,13 +43,14 @@ const MyTeamPage = () => {
             deadlineDay: 15,
             collectPart: '마케팅 전문가, 콘텐츠 제작자',
             person: 3,
-            tag: '마케팅, 전략, 콘텐츠',
+            tag: ['마케팅', '전략', '콘텐츠'], // 배열 형태로 변경
             recruitmentParts: [
                 { partName: '마케팅 전문가', numberNeeded: 1 },
                 { partName: '콘텐츠 제작자', numberNeeded: 2 },
             ],
         },
     ];
+    
     
 
     return (
