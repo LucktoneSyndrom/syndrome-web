@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import { Chip } from "@mui/material";
+import { Chip, Stack } from "@mui/material";
 import styles from "./TeamCard.module.css";
 import { TeamCardInfo } from "../types/TeamCardInfo";
 
@@ -28,19 +28,25 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
       <h3 className={styles.shortDescription}>
         {teamCardInfo.shortDescription}
       </h3>
-      <Chip
-        label={teamCardInfo.collectPart}
-        className={styles.chip}
-        color={
-          teamCardInfo.collectPart === "Frontend"
-            ? "error"
-            : teamCardInfo.collectPart === "Backend"
-            ? "primary"
-            : teamCardInfo.collectPart === "Mobile"
-            ? "success"
-            : "default"
-        }
-      />
+      <Stack direction="row" spacing={0.5}>
+        {teamCardInfo.collectPart.map((part, index) => (
+          <Chip
+            key={index}
+            label={part}
+            className={styles.chip}
+            color={
+              part === "Frontend"
+                ? "error"
+                : part === "Backend"
+                ? "primary"
+                : part === "Mobile"
+                ? "success"
+                : "default"
+            }
+          />
+        ))}
+      </Stack>
+
       <p className={styles.teamName}>{teamCardInfo.teamName}</p>
 
       <div className={styles.recruitmentParts}>

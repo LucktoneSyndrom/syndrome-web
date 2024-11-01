@@ -17,6 +17,9 @@ const mockRecommendedTeams: TeamCardInfo[] = [
     shortDescription: "함께 성장할 팀원을 찾습니다.",
     deadline: "2023-12-31",
     recruitmentParts: [{ partName: "프론트엔드", numberNeeded: 1 }],
+    collectPart: ["Frontend"],
+    deadlineDay: 24,
+    tag: ["공모전"],
   },
   {
     id: "2",
@@ -24,6 +27,9 @@ const mockRecommendedTeams: TeamCardInfo[] = [
     shortDescription: "열정적인 백엔드 개발자를 모집합니다.",
     deadline: "2023-11-30",
     recruitmentParts: [{ partName: "백엔드", numberNeeded: 2 }],
+    deadlineDay: 20,
+    collectPart: ["Backend"],
+    tag: ["Spring"],
   },
   // 추가 데이터
 ];
