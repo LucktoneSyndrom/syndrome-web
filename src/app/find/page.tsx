@@ -13,14 +13,14 @@ import Category from "../../components/Category";
 import ProfileCard from "../../components/ProfileCard";
 
 const mockMyTeamsData: TeamCardInfo[] = [
-  {
-    id: "1",
-    teamName: "내가 만든 프로젝트 1",
-    shortDescription: "프로젝트 설명 1",
-    deadline: "2023-12-31",
-    recruitmentParts: [{ partName: "백엔드", numberNeeded: 1 }],
-  },
-  // 추가 데이터
+    {
+        id: 'team-001',
+        teamName: '내가 만든 프로젝트 1',
+        shortDescription: '프로젝트 설명 1',
+        deadline: '2023-12-31',
+        recruitmentParts: [{ partName: '백엔드', numberNeeded: 1 }],
+    },
+    // 추가 데이터
 ];
 
 const mockProfileCardData: UserCardInfo[] = [

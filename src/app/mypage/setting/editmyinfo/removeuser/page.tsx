@@ -12,6 +12,12 @@ const HomePage = () => {
 
     }
 
+    const handleRemoveButton = ()=>{
+        alert("회원탈퇴가 완료되었습니다. 홈화면으로 돌아갑니다.");
+        router.push('/');
+
+    }
+
 
     return (
         <div className={styles.container}>
@@ -21,7 +27,7 @@ const HomePage = () => {
                 <p>지금 떠나면 너무 아쉬워요!</p>
                 <p>정말 탈퇴하시겠어요?</p>
                 <div className={styles.buttonContainer}>
-                    <button className={styles.buttonRemove}>탈퇴하기</button>
+                    <button className={styles.buttonRemove} onClick={handleRemoveButton}>탈퇴하기</button>
                     <button className={styles.button} onClick={handleCancelButton}>취소</button>
                 </div>
             </section>

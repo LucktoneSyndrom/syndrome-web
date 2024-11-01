@@ -19,8 +19,9 @@ const TeamItem: React.FC<TeamItemProps> = ({ teamInfo }) => {
     };
 
     const handleViewDetails = () => {
-        router.push(`/find/my-team/${teamInfo.id}`);
+        router.push(`/gather/team/${teamInfo.id}`);
     };
+
 
     const handleViewApplicants = () => {
         router.push(`/find/my-team/${teamInfo.id}/applicants`);

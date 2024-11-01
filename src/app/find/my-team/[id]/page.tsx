@@ -1,9 +1,10 @@
 // src/app/find/my-team/[id]/page.tsx
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import styles from './MyTeamDetail.module.css';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
+import { TeamDetailInfo } from "../../../../types/TeamDetailInfo";
 
 const MyTeamDetailPage = () => {
     const params = useParams();
@@ -48,6 +49,7 @@ const MyTeamDetailPage = () => {
     const handleEditClick = () => {
         router.push(`/find/my-team/${teamId}/edit`);
     };
+
 
     if (!teamDetailInfo) {
         return <p>로딩 중...</p>;

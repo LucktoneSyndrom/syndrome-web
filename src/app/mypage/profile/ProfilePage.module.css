@@ -18,11 +18,14 @@
 
 .formGroup {
     margin-bottom: 20px;
+    width: 100%; /* 폭을 전체로 사용 */
 }
+
 
 .label {
     display: block;
     font-weight: bold;
+    font-size:1.2em;
     color: #2c3e50;
     margin-bottom: 8px;
 }
@@ -62,3 +65,55 @@
 .saveButton:hover {
     background-color: #218838;
 }
+
+
+/* ProfilePage.module.css */
+.editButton {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+
+
+/* ProfilePage.module.css */
+.value {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    width: 100%; /* 폭을 전체로 사용 */
+    word-wrap: break-word; /* 긴 텍스트가 넘치지 않도록 설정 */
+}
+
+
+
+/* ProfilePage.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.form {
+    flex: 1;
+}
+
+.profileSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px; /* 요소 간의 간격 추가 */
+}
+
+.profileImage {
+    position: absolute; /* 절대 위치 설정 */
+    top: 80px; /* 원하는 위치에 맞게 위쪽 여백 설정 */
+    right: 20px; /* 원하는 위치에 맞게 오른쪽 여백 설정 */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
