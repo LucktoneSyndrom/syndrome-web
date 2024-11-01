@@ -7,6 +7,15 @@ const CustomInputLabel = styled(InputLabel)({
   marginTop: "18.9px",
 });
 
+const CustomSelect = ({ labelId, label, ...props }) => (
+  <FormControl fullWidth>
+    <CustomInputLabel id={labelId} shrink>
+      {label}
+    </CustomInputLabel>
+    <Select labelId={labelId} sx={style.select} {...props} />
+  </FormControl>
+);
+
 const style = {
   container: {
     width: "100%",
@@ -28,30 +37,10 @@ const Category = () => {
   return (
     <Box sx={style.container}>
       <Stack spacing={2} direction="row" sx={style.stack}>
-        <FormControl fullWidth>
-          <CustomInputLabel id="region-label" shrink>
-            지역
-          </CustomInputLabel>
-          <Select labelId="region-label" sx={style.select} />
-        </FormControl>
-        <FormControl fullWidth>
-          <CustomInputLabel id="category-label" shrink>
-            분야
-          </CustomInputLabel>
-          <Select labelId="category-label" sx={style.select} />
-        </FormControl>
-        <FormControl fullWidth>
-          <CustomInputLabel id="type-label" shrink>
-            스택
-          </CustomInputLabel>
-          <Select labelId="type-label" sx={style.select} />
-        </FormControl>
-        <FormControl fullWidth>
-          <CustomInputLabel id="status-label" shrink>
-            정렬순
-          </CustomInputLabel>
-          <Select labelId="status-label" sx={style.select} />
-        </FormControl>
+        <CustomSelect labelId="region-label" label="지역" />
+        <CustomSelect labelId="category-label" label="분야" />
+        <CustomSelect labelId="type-label" label="스택" />
+        <CustomSelect labelId="status-label" label="정렬순" />
       </Stack>
     </Box>
   );
