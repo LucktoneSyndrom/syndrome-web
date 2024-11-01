@@ -29,7 +29,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ teamCardInfo, isSelected }) => {
         {teamCardInfo.shortDescription}
       </h3>
       <Stack direction="row" spacing={0.5}>
-        {teamCardInfo.collectPart.map((part, index) => (
+          {teamCardInfo.collectPart && teamCardInfo.collectPart.map((part, index) => (
           <Chip
             key={index}
             label={part}

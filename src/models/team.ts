@@ -14,7 +14,7 @@ export class Team extends Model {
     public deadline?: Date;
     public noDeadline!: boolean;
     public location!: string;
-    public recruitmentParts!: object[];
+    public recruitmentParts!: { partName: string; numberNeeded: number }[];
     public techStacks!: string[];
     public leaderId!: number;
 }
@@ -45,6 +45,7 @@ Team.init(
         noDeadline: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
+            defaultValue: false, // 기본값 설정
         },
         location: {
             type: DataTypes.STRING,
@@ -53,10 +54,24 @@ Team.init(
         recruitmentParts: {
             type: DataTypes.JSON,
             allowNull: false,
+            validate: {
+                isArray(value: any) {
+                    if (!Array.isArray(value)) {
+                        throw new Error("recruitmentParts must be an array");
+                    }
+                },
+            },
         },
         techStacks: {
             type: DataTypes.JSON,
             allowNull: false,
+            validate: {
+                isArray(value: any) {
+                    if (!Array.isArray(value)) {
+                        throw new Error("techStacks must be an array");
+                    }
+                },
+            },
         },
         leaderId: {
             type: DataTypes.INTEGER.UNSIGNED,

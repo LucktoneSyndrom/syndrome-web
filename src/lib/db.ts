@@ -1,12 +1,16 @@
 // src/lib/db.ts
 
-import { Sequelize } from 'sequelize';
+import { Sequelize } from "sequelize";
+import sqlite3 from "sqlite3";
 
 // SQLite를 사용하여 Sequelize 인스턴스 생성
 export const sequelize = new Sequelize({
     dialect: 'sqlite', // SQLite 사용
     storage: './database.sqlite3', // 데이터베이스 파일 경로
+    dialectModule: sqlite3
 });
+
+
 
 // 데이터베이스 연결 테스트
 sequelize

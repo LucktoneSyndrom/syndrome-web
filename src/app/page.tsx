@@ -31,7 +31,6 @@ const mockRecommendedTeams: TeamCardInfo[] = [
     collectPart: ["Backend"],
     tag: ["Spring"],
   },
-  // 추가 데이터
 ];
 
 const HomePage = () => {
